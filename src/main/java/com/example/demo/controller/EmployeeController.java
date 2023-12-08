@@ -2,22 +2,20 @@ package com.example.demo.controller;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+//import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.model.Address;
 import com.example.demo.model.Employee;
-//import org.springframework.web.bind.annotation.PostMapping;
-//import org.springframework.web.bind.annotation.DeleteMapping;
-//import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
-@RequestMapping("/employees")
+//@RequestMapping
 public class EmployeeController {
 
     private final List<Employee> employees = new ArrayList<>();
 
-    @GetMapping()
+    @GetMapping
     public List<Employee> getEmployees(){
+        System.out.println("Here ..................");
         return employees;
     }
 
